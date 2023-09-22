@@ -1,0 +1,2 @@
+pyserial #python3-pip
+
