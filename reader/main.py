@@ -18,9 +18,15 @@ with open(csv_filename, mode='w', newline='') as file:
 try:
     while True:
         
-        sensor_value = ser.readline().strip().decode('utf-8')  #get value from serial
+        sensor_value = int(ser.readline().strip().decode('utf-8'))  #get value from serial
 
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        
+        # calculate the light value 
+        if sensor_value > 980:
+            light_value = 0
+        else:
+            light_value = 980 - sensor_value
 
        
        # print(f"Timestamp: {timestamp}, Sensor Value: {sensor_value}")
@@ -28,7 +34,7 @@ try:
         #write
         with open(csv_filename, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([timestamp, sensor_value])
+            writer.writerow([timestamp, sensor_value, light_value])
 
 except KeyboardInterrupt:
     pass
