@@ -13,20 +13,19 @@ import {Nav,Navbar,Container,NavDropdown} from 'react-bootstrap';
 
 function Streetlight(props){
   const [mode, setMode] = useState(false)
-  const name1='sl '+props.name
-  const name2='sl '+(parseInt(props.name)+1)
+  const name1='1_'+props.name
+  const name2='2_'+props.name
   return (
     <div class='row' style={{display:'flex'}}>
        
       <div class="lights">
         <IconButton sx={{color:'white'}}><ImSwitch/></IconButton>
-        <Tooltip title={<Typography fontSize={20}>{name1} </Typography>}arrow placement='right'> <IconContext.Provider value={{size:70}}><GiStreetLight/></IconContext.Provider> </Tooltip>
+        <Tooltip title={<Typography fontSize={20}>{name1} </Typography>}arrow placement='right'> <IconContext.Provider value={{size:70,color:'yellow'}}><GiStreetLight/></IconContext.Provider> </Tooltip>
       </div>
       
 
       <div class="lights">
-      <Tooltip title={<Typography fontSize={20}>{name2} </Typography>}arrow placement='left'>
-        <IconContext.Provider value={{size:70}}>
+      <Tooltip title={<Typography fontSize={20}>{name2} </Typography>}arrow placement='left'>        <IconContext.Provider value={{size:70}}>
           <GiStreetLight style={{transform: 'scaleX(-1)' }}/>
           </IconContext.Provider> 
           </Tooltip>
@@ -42,8 +41,8 @@ const App=()=>{
    
     <div>
       <Streetlight name='1'/>
+      <Streetlight name='2'/>
       <Streetlight name='3'/>
-      <Streetlight name='5'/>
     </div>
     </div>
     
