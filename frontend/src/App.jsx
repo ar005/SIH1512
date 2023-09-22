@@ -40,7 +40,7 @@ const App=()=>{
     <div>
      {/* Working on Appbar still */}
    
-    <div class="maindiv">
+    <div>
       <Streetlight name='1'/>
       <Streetlight name='3'/>
       <Streetlight name='5'/>
