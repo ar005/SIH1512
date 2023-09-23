@@ -3,7 +3,7 @@ from telegram.ext import Updater, CommandHandler
 import pandas as pd
 
 # Replace 'YOUR_BOT_TOKEN' with your actual Telegram bot token
-BOT_TOKEN = ''
+BOT_TOKEN = '6461499643:AAFjfybBZLTc_CFfd_QCy1R6Zb5FQpLMkFI'
 
 # Function to read network.csv and return network information
 def read_network(update, context):
