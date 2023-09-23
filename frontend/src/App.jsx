@@ -10,13 +10,13 @@ function App(){
   return(
     <div>
       <Router>
-        <Navbar>
+        {/* <Navbar> */}
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path='*' element={<h1 align="center">Error 404 : Page Not Found</h1>}/>
           </Routes>
-        </Navbar>
+        {/* </Navbar> */}
       </Router>
     </div>
   )
