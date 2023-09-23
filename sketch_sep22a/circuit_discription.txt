@@ -1,0 +1,2 @@
+add resistor of 100K ohm in series with ldr
+now connect one terminal of ldr to 5V and connect the another terminal of ldr to A0 and the  other terminal of resistor to pin gnd
